@@ -1,20 +1,20 @@
-{% set version = "0.1.3" %}
+{% set version = "0.1.4" %}
 
 package:
-  name: pymagewell 
-  version: {{ version }} 
+  name: pymagewell
+  version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/source/p/pymagewell/pymagewell-{{ version }}.tar.gz  
-    sha256: bc906d1c5c70146d4131ff8932d969279c2a97f3f8d8792ba6093b2b1bd972c9
+  - url: https://pypi.io/packages/source/p/pymagewell/pymagewell-{{ version }}.tar.gz
+    sha256: 248a1b7a6bb90e7caf68dde832b85064771641c326179f2600c99ca4b8527659
   - url: https://github.com/KCL-BMEIS/pymagewell/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: 4ec8822a0a4816c515a521ddc9b1f74f4464b12414fcfffa4dc2a102a44c2629
+    sha256: d89dd46c7db9fda9a8df313ec2c715523b3b4af47c03d1cc7b65c8f652c6aa4c
     folder: test-data
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: True  # [py<39 or linux or python_impl == 'pypy']
+  skip: true  # [py<39 or linux or python_impl == 'pypy']
 
 requirements:
   build:
@@ -45,7 +45,7 @@ test:
 
 about:
   home: https://github.com/KCL-BMEIS/pymagewell
-  summary: Python library for interfacing with Magewell ProCapture frame grabbers 
+  summary: Python library for interfacing with Magewell ProCapture frame grabbers
   description: |
     pymagewell is a Python library for interfacing with Magewell ProCapture frame grabbers. It is based on (and includes) Magewell's Windows SDK and is therefore Windows only. However, it provides a mock class for testing and development that does not depend on the SDK's Windows .dll files, so pymagwell can also be installed on macOS and Linux.
   doc_url: https://kcl-bmeis.github.io/pymagewell/
