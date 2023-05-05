@@ -1,11 +1,11 @@
-About pymagewell
-================
+About pymagewell-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pymagewell-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/KCL-BMEIS/pymagewell
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pymagewell-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python library for interfacing with Magewell ProCapture frame grabbers
 
