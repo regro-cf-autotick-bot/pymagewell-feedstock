@@ -25,7 +25,7 @@ requirements:
     - python
   run:
     - numpy >=1.21.4
-    - pywin32 >=303  # [win]
+    - pywin32 >=306  # [win]
     - python
     - libopencv >=4.5.5
     - opencv >=4.5.5
