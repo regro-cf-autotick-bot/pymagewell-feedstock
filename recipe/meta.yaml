@@ -1,4 +1,4 @@
-{% set version = "0.1.5" %}
+{% set version = "0.2.0" %}
 
 package:
   name: pymagewell
@@ -6,9 +6,9 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/p/pymagewell/pymagewell-{{ version }}.tar.gz
-    sha256: 1eb5d21419424f16c7d3872bb28dd681f5b243c72130c7b01a9f6a3f52320460
+    sha256: 986bbcac605b97c60f54b1049a20ba528d82dafdd9cbe573e03887ef581191df
   - url: https://github.com/KCL-BMEIS/pymagewell/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: 6f7f9c3e438866e6ee7390acede4dd8e4c3bfb7f1370deb4d577b203820f943e
+    sha256: c1a2723a00fecb50e73a346b15239ee8e06f4686aaccf2d1a8bd6a6c2fce8077
     folder: test-data
 
 build:
