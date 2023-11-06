@@ -1,4 +1,4 @@
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: pymagewell
@@ -6,13 +6,13 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/p/pymagewell/pymagewell-{{ version }}.tar.gz
-    sha256: 986bbcac605b97c60f54b1049a20ba528d82dafdd9cbe573e03887ef581191df
+    sha256: 70cdf755fe6001a871a97b987f1e9b3d67ba97f5f2a23675f6e0fa717a457a37
   - url: https://github.com/KCL-BMEIS/pymagewell/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: c1a2723a00fecb50e73a346b15239ee8e06f4686aaccf2d1a8bd6a6c2fce8077
+    sha256: ec32e4efff7f52b3be83a8fe6d5b969c2212365d0b5abe8a2bdd016083c0e19e
     folder: test-data
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<39 or linux or python_impl == 'pypy']
 
@@ -24,19 +24,19 @@ requirements:
     - pip
     - python
   run:
-    - numpy >=1.21.4
+    - numpy >=1.23.4
     - pywin32 >=304  # [win]
     - python
-    - libopencv >=4.5.5
-    - opencv >=4.5.5
-    - py-opencv >=4.5.5
+    - libopencv >=4.6.0
+    - opencv >=4.6.0
+    - py-opencv >=4.6.0
 test:
   imports:
     - mwcapture
     - pymagewell
   requires:
     - pip
-    - pytest
+    - pytest ==7.4.3
   source_files:
     - test-data/src/tests
   commands:
